@@ -17,7 +17,12 @@ public class ImovelResource {
 	@Autowired
 	private ImovelService service;
 	
-	@RequestMapping(value="/all", method = RequestMethod.GET)
+	@RequestMapping(value="/ola", method = RequestMethod.GET)
+	public String Ola() {
+		return "oi";
+	}
+	
+	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<?> findAll(){
 		return ResponseEntity.ok().body(service.findAll());
 	}
